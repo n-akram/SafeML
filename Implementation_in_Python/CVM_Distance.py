@@ -1,7 +1,7 @@
 # Cramer-Von Mises Distance
-def CVM_Dist(XX, YY)
-  
-    import numpy as np
+import numpy as np
+
+def CVM_Dist(XX, YY):
     nx = len(XX)
     ny = len(YY)
     n = nx + ny
@@ -28,7 +28,7 @@ def CVM_Dist(XX, YY)
 
     CVM_Dist = Res
     
-return CVM_Dist
+    return CVM_Dist
 
 if __name__ == '__main__':
 

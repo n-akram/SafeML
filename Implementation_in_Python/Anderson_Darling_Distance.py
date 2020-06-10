@@ -1,6 +1,6 @@
-def Anderson_Darling_Dist(XX, YY)
-  
-    import numpy as np
+import numpy as np
+
+def Anderson_Darling_Dist(XX, YY):  
     nx = len(XX)
     ny = len(YY)
     n = nx + ny
@@ -30,11 +30,10 @@ def Anderson_Darling_Dist(XX, YY)
         height = abs(F_CDF - E_CDF)
         if XY_Sorted[ii+1] != XY_Sorted[ii]: 
             if SD>0: 
-            Res = Res + (height/SD)**power
-
+                Res = Res + (height/SD)**power
     AD_Dist = Res
     
-return AD_Dist
+    return AD_Dist
 
 if __name__ == '__main__':
 

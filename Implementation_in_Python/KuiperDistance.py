@@ -1,6 +1,6 @@
-def Kuiper_Dist(XX, YY)
-  
-    import numpy as np
+import numpy as np
+
+def Kuiper_Dist(XX, YY):
     nx = len(XX)
     ny = len(YY)
     n = nx + ny
@@ -14,7 +14,7 @@ def Kuiper_Dist(XX, YY)
     X2_Sorted = X2[S_Ind]
     Y2_Sorted = Y2[S_Ind]
 
-    uo = 0
+    up = 0
     down = 0
     Res = 0
     E_CDF = 0
@@ -28,9 +28,9 @@ def Kuiper_Dist(XX, YY)
         if height > up: up = height
         if height < up: down = height
 
-   K_Dist = abs(down)**power + abs(up)**power
+    K_Dist = abs(down)**power + abs(up)**power
     
-return K_Dist
+    return K_Dist
 
 if __name__ == '__main__':
 

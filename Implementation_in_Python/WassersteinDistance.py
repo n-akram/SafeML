@@ -1,6 +1,6 @@
-def Wasserstein_Dist(XX, YY)
-  
-    import numpy as np
+import numpy as np
+
+def Wasserstein_Dist(XX, YY):
     nx = len(XX)
     ny = len(YY)
     n = nx + ny
@@ -28,7 +28,7 @@ def Wasserstein_Dist(XX, YY)
 
     WS_Dist = Res
     
-return WS_Dist
+    return WS_Dist
 
 if __name__ == '__main__':
 

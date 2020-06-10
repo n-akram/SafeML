@@ -1,6 +1,6 @@
-def Kolmogorov_Smirnov_Dist(XX, YY)
-  
-    import numpy as np
+import numpy as np
+
+def Kolmogorov_Smirnov_Dist(XX, YY):
     nx = len(XX)
     ny = len(YY)
     n = nx + ny
@@ -24,10 +24,8 @@ def Kolmogorov_Smirnov_Dist(XX, YY)
         F_CDF = F_CDF + Y2_Sorted[ii]
         if XY_Sorted[ii+1] != XY_Sorted[ii]: height = abs(F_CDF-E_CDF)
         if height > Res: Res = height
-
-KS_Dist = Res**power
-    
-return KS_Dist
+    KS_Dist = Res**power
+    return KS_Dist
 
 if __name__ == '__main__':
 
